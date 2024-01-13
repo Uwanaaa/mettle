@@ -1,10 +1,11 @@
-import { useState, useEffect } from "react";
+//import { useState, useEffect } from "react";
 
 
-export function Signup(){
+export default function Signup(){
     return(
         <>
         <div>
+          <h3>Signup</h3>
         <form>
   <div className="mb-3">
     <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>

@@ -1,9 +1,10 @@
-import { useState,useEffect } from "react";
+//import { useState,useEffect } from "react";
 
-export function Login(){
+export default function Login(){
     return(
         <>
         <div>
+          <h3>Login</h3>
         <form>
   <div className="mb-3">
     <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
