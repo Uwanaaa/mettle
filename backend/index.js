@@ -18,6 +18,10 @@ server.use(cors())
 server.use(bodyParser.urlencoded({extended:true}))
 server.use(express.json())
 
+server.get('/',(req,res) => {
+    res.send('Server is up')
+})
+
 server.post('/user/signup/',async (req,res) => {
     let{username,email,password} = req.body
     //res.send('Message received')
