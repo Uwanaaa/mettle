@@ -104,3 +104,5 @@ server.use(express.static('../frontend/mettle/dist'))
 server.listen(PORT,() => {
     console.log("Listening at port", PORT)
 })
+
+module.exports = server
