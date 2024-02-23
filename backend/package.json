@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "\"This the backend of my metube project\"",
   "main": "server.js",
-  "type": "commonjs",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "build" : "node server.js",
+    "start": "node index.js",
+    "build" : "node index.js",
     "nodemon": "nodemon --exec 'esbuild --platform=node --outdir=dist --entry-point=src/server.js --watch --bundle'"
   },
   "author": "Udofia Unwana",

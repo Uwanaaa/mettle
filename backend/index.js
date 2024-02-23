@@ -1,24 +1,24 @@
-//import {userCollection,findUser} from './database/database.js'
+import {userCollection,findUser} from './database/database.js'
 import mailer from 'nodemailer'
 import mongoose from 'mongoose'
-//import express from 'express'
-//import cors from 'cors'
-//import bodyParser from 'body-parser'
-//import bcrypt from 'bcrypt'
-//import fs from 'fs'
+import express from 'express'
+import cors from 'cors'
+import bodyParser from 'body-parser'
+import bcrypt from 'bcrypt'
+import fs from 'fs'
 
-const express = require('express')
-const cors = require('cors')
-const bodyParser = require('body-parser')
-const bcrypt = require('bcrypt')
-const fs = require('fs')
-const {userCollection,findUser} =require('./database/database.js')
+// const express = require('express')
+// const cors = require('cors')
+// const bodyParser = require('body-parser')
+// const bcrypt = require('bcrypt')
+// const fs = require('fs')
+// const {userCollection,findUser} =require('./database/database.js')
 
 
 import ('crypto').then(() => {})
 
 
-const server = express()
+export const server = express()
 const PORT = 3000
 
 server.use(cors())
@@ -36,6 +36,7 @@ server.post('/user/signup/',async (req,res) => {
 
     //Check if user already exists
     const userExist = await userCollection.findOne({name:username,email:email})
+    console.log(userExist)
     if(userExist){
         console.log('User exist')
         return res.send({userStatus:'User exist',pass:false})
@@ -112,4 +113,5 @@ server.listen(PORT,() => {
     console.log("Listening at port", PORT)
 })
 
-module.exports = server
+//module.exports = server
+
